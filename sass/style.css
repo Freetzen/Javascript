@@ -1,0 +1,253 @@
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Dosis', sans-serif;
+  font-weight: bold;
+}
+
+#header {
+  background: url(../imagenes/reel.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
+  height: 100vh;
+  width: 100%;
+}
+
+#header .navbar {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0px;
+  position: fixed;
+  width: 100%;
+  z-index: 999;
+}
+
+#header .navbar .container-fluid {
+  color: black;
+}
+
+#header .navbar-light {
+  background: white;
+}
+
+#header nav ul li a {
+  text-decoration: none;
+  color: #719f41;
+  font-size: 20px;
+  text-align: center;
+}
+
+.info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 30px;
+  background-color: rgba(114, 159, 65, 0.642);
+  border: 2px solid white;
+  margin: 20px;
+  border-radius: 10px;
+}
+
+.info .nosotros {
+  text-align: center;
+  border-radius: 10px;
+  -webkit-box-shadow: 0 5px 2px white;
+          box-shadow: 0 5px 2px white;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  background-color: white;
+  padding: 5px;
+  width: 400px;
+}
+
+.info .nosotros p {
+  font-size: 15px;
+}
+
+.info .nosotros h1 {
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.info .nosotros:hover {
+  -webkit-transform: translateY(-3px);
+          transform: translateY(-3px);
+  -webkit-box-shadow: 0 12px 12px white;
+          box-shadow: 0 12px 12px white;
+}
+
+.tienda {
+  text-align: center;
+}
+
+.tienda .productos {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: #ebebeb;
+  margin: 20px;
+  border-radius: 10px;
+}
+
+.tienda .productos .tituloTienda {
+  margin-bottom: 30px;
+}
+
+.tienda .productos .tituloTienda h2 {
+  font-size: 40px;
+}
+
+.tienda .productos .productos6 {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  justify-items: center;
+}
+
+.tienda .productos .productos6 .reel {
+  margin-bottom: 20px;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.tienda .productos .productos6 .reel .cta {
+  border: none;
+  background: none;
+  margin-bottom: 10px;
+}
+
+.tienda .productos .productos6 .reel .cta span {
+  padding-bottom: 7px;
+  letter-spacing: 4px;
+  font-size: 10px;
+  padding-right: 15px;
+  text-transform: uppercase;
+}
+
+.tienda .productos .productos6 .reel .cta svg {
+  -webkit-transform: translateX(-8px);
+          transform: translateX(-8px);
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.tienda .productos .productos6 .reel .cta:hover svg {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+}
+
+.tienda .productos .productos6 .reel .cta:active svg {
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
+}
+
+.tienda .productos .productos6 .reel .cta .hover-underline-animation {
+  position: relative;
+  color: black;
+  padding-bottom: 5px;
+  font-size: 10px;
+}
+
+.tienda .productos .productos6 .reel .cta .hover-underline-animation:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  height: 1.5px;
+  bottom: 0;
+  left: 0;
+  background-color: #000000;
+  -webkit-transform-origin: bottom right;
+          transform-origin: bottom right;
+  -webkit-transition: -webkit-transform 0.25s ease-out;
+  transition: -webkit-transform 0.25s ease-out;
+  transition: transform 0.25s ease-out;
+  transition: transform 0.25s ease-out, -webkit-transform 0.25s ease-out;
+}
+
+.tienda .productos .productos6 .reel .cta:hover .hover-underline-animation:after {
+  -webkit-transform: scaleX(0.8);
+          transform: scaleX(0.8);
+  -webkit-transform-origin: bottom left;
+          transform-origin: bottom left;
+}
+
+.tienda .productos .productos6 .reel img {
+  width: 60%;
+  margin-bottom: 10px;
+  border-radius: 10px;
+}
+
+.clima .climaContenedor {
+  background-image: url(../imagenes/clima.jpeg);
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin: 20px;
+  border-radius: 10px;
+}
+
+.clima .climaContenedor .tituloClima {
+  text-align: center;
+  padding: 10px;
+}
+
+.clima .climaContenedor .tituloClima h3 {
+  color: black;
+  font-weight: bold;
+}
+
+.clima .climaContenedor .tituloClima p {
+  color: black;
+  font-weight: bold;
+}
+
+.clima .climaContenedor .tituloClima img {
+  width: 50px;
+}
+
+.clima .climaContenedor .buscarClima {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.clima .climaContenedor .buscarClima input {
+  margin-bottom: 30px;
+}
+
+footer .container a {
+  text-decoration: none;
+}
+
+footer .text-center a {
+  text-decoration: none;
+}
+
+footer .logoFooter img {
+  width: 150px;
+}
+/*# sourceMappingURL=style.css.map */

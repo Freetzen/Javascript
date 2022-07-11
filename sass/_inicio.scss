@@ -1,0 +1,257 @@
+
+#header{
+    background: url(../imagenes/reel.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+    height: 100vh;
+    width: 100%;
+
+    .navbar{
+        position: sticky;
+        top: 0px;
+        position: fixed;
+        width: 100%;
+        z-index: 999;
+
+        .container-fluid{
+            color: black;
+        }
+
+    }
+
+    .navbar-light{
+        background: white;
+        
+    }
+
+    nav{
+
+        ul{
+
+            li{
+
+                a{
+                    text-decoration: none;
+                    color: rgb(113,159,65);
+                    font-size: 20px;
+                    text-align: center;
+                }
+
+            }
+
+        }
+
+    }
+
+}
+
+.info{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+    background-color: $colorPrincipal;
+    border: 2px solid white;
+    margin: 20px;
+    border-radius: 10px;
+
+    .nosotros{
+        text-align: center;
+        border-radius: 10px;
+        box-shadow: 0 5px 2px white;
+        margin-top: 30px;
+        margin-bottom: 30px;
+        background-color: white;
+        padding: 5px;
+        width: 400px;
+
+        p{
+            font-size: 15px;
+        }
+
+        h1{
+            font-size: 35px;
+            font-weight: bold;
+        }
+
+        &:hover{
+            transform: translateY(-3px);
+            box-shadow: 0 12px 12px white;
+
+        }
+
+    }
+
+}
+
+.tienda{
+    text-align: center;
+
+    .productos{
+        display: flex;
+        flex-direction: column;
+        background-color: $colorGris;
+        margin: 20px;
+        border-radius: 10px;
+
+        .tituloTienda{
+            margin-bottom: 30px;
+            
+            h2{
+                font-size: 40px;
+            }
+
+        }
+
+        .productos6{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            justify-items: center;
+
+            .reel{
+                margin-bottom: 20px;
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+                .cta {
+                    border: none;
+                    background: none;
+                    margin-bottom: 10px;
+
+                    span {
+                        padding-bottom: 7px;
+                        letter-spacing: 4px;
+                        font-size: 10px;
+                        padding-right: 15px;
+                        text-transform: uppercase;
+                    }
+
+                    svg {
+                        transform: translateX(-8px);
+                        transition: all 0.3s ease;
+                    }
+
+                    &:hover svg {
+                        transform: translateX(0);
+                    }
+
+                    &:active svg {
+                        transform: scale(0.9);
+                    }
+
+                    .hover-underline-animation {
+                        position: relative;
+                        color: black;
+                        padding-bottom: 5px;
+                        font-size: 10px;
+
+                        &:after {
+                            content: "";
+                            position: absolute;
+                            width: 100%;
+                            transform: scaleX(0);
+                            height: 1.5px;
+                            bottom: 0;
+                            left: 0;
+                            background-color: #000000;
+                            transform-origin: bottom right;
+                            transition: transform 0.25s ease-out;
+                        }
+
+                           
+                    }
+
+                    &:hover .hover-underline-animation:after {
+                        transform: scaleX(0.8);
+                        transform-origin: bottom left;
+                    }
+
+                }
+
+                img{
+                    width: 60%;
+                    margin-bottom: 10px;
+                    border-radius: 10px;
+                }
+
+            }
+
+        }
+
+    }
+
+}
+
+.clima{
+
+    
+    .climaContenedor{
+        background-image: url(../imagenes/clima.jpeg);
+        background-size: cover;
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        background-position: center;
+        margin: 20px;
+        border-radius: 10px;
+
+        .tituloClima{
+            text-align: center;
+            padding: 10px;
+
+            h3{
+                color: black;
+                font-weight: bold;
+            }
+
+            p{
+                color: black;
+                font-weight: bold;
+            }
+
+            img{
+                width: 50px;
+            }
+
+        }
+
+        .buscarClima{
+            text-align: center;
+            margin-bottom: 50px;
+
+            input{
+                margin-bottom: 30px;
+            }
+        }
+
+    }
+
+}
+
+footer{
+
+    .container{
+        a{
+            text-decoration: none;
+        }
+    }
+
+    .text-center{
+
+        a{
+            text-decoration: none;
+        }
+        
+    }
+
+    .logoFooter{
+        img{
+            width: 150px;
+        }
+
+    }
+
+}
