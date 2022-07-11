@@ -53,9 +53,9 @@
     justify-content: center;
     margin-bottom: 30px;
     background-color: $colorPrincipal;
-    border: 2px solid white;
     margin: 20px;
     border-radius: 10px;
+    box-shadow: $sombra;
 
     .nosotros{
         text-align: center;
@@ -68,11 +68,11 @@
         width: 80%;
 
         p{
-            font-size: 15px;
+            font-size: 14px;
         }
 
         h1{
-            font-size: 35px;
+            font-size: 25px;
             font-weight: bold;
         }
 
@@ -88,6 +88,7 @@
 
 .tienda{
     text-align: center;
+    margin-top: 50px;
 
     .productos{
         display: flex;
@@ -95,6 +96,7 @@
         background-color: $colorGris;
         margin: 20px;
         border-radius: 10px;
+        box-shadow: $sombra;
 
         .tituloTienda{
             margin-bottom: 30px;
@@ -187,7 +189,7 @@
 }
 
 .clima{
-
+    margin-top: 50px;
     
     .climaContenedor{
         background-image: url(../imagenes/clima.jpeg);
@@ -197,6 +199,7 @@
         background-position: center;
         margin: 20px;
         border-radius: 10px;
+        box-shadow: $sombra;
 
         .tituloClima{
             text-align: center;
@@ -224,6 +227,7 @@
 
             input{
                 margin-bottom: 30px;
+                border-radius: 10px;
             }
         }
 
