@@ -70,11 +70,11 @@
 }
 
 .info .nosotros p {
-  font-size: 14px;
+  font-size: 17px;
 }
 
 .info .nosotros h1 {
-  font-size: 25px;
+  font-size: 30px;
   font-weight: bold;
 }
 
@@ -111,6 +111,7 @@
 
 .tienda .productos .tituloTienda h2 {
   font-size: 40px;
+  font-weight: bold;
 }
 
 .tienda .productos .productos6 {
@@ -171,7 +172,7 @@
   position: relative;
   color: black;
   padding-bottom: 5px;
-  font-size: 10px;
+  font-size: 12px;
 }
 
 .tienda .productos .productos6 .reel .cta .hover-underline-animation:after {
@@ -260,5 +261,91 @@ footer .text-center a {
 
 footer .logoFooter img {
   width: 150px;
+}
+
+.contenedor-formulario {
+  padding: 20px;
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.contenedor-formulario .form-label {
+  display: block;
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  position: relative;
+  font-weight: bolder;
+  padding-bottom: 5px;
+}
+
+.contenedor-formulario .formulario {
+  background-color: rgba(114, 159, 65, 0.642);
+  width: 90%;
+  max-width: 650px;
+  margin: auto;
+  padding: 5px 35px;
+  margin-top: 30px;
+  border-radius: 3px;
+}
+
+.contenedor-formulario .formulario .form-textarea {
+  background-color: #ebebeb;
+  border: none;
+  outline: none;
+  border-bottom: 2px solid white;
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 20px;
+  border-radius: 2px;
+  font-size: 18px;
+  color: white;
+}
+
+.contenedor-formulario .formulario .form-input {
+  background-color: #ebebeb;
+  border: none;
+  outline: none;
+  border-bottom: 2px solid white;
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 20px;
+  border-radius: 2px;
+  font-size: 18px;
+  color: white;
+}
+
+.contenedor-formulario .formulario .form-header .form-titulo {
+  color: white;
+  font-weight: bold;
+  font-size: 30px;
+  padding-top: 20px;
+  padding-bottom: 30px;
+}
+
+.contenedor-formulario .formulario .form-textarea {
+  resize: vertical;
+  height: 200px;
+  max-height: 300px;
+  min-height: 50px;
+}
+
+.contenedor-formulario .formulario .form-boton {
+  width: 100%;
+  outline: none;
+  background-color: #ebebeb;
+  font-size: 16px;
+  color: black;
+  font-weight: bold;
+  padding: 15px 0;
+  cursor: pointer;
+  -webkit-transition: all .5s ease;
+  transition: all .5s ease;
+}
+
+.contenedor-formulario .formulario .form-boton:hover {
+  background-color: rgba(114, 159, 65, 0.642);
+  color: white;
 }
 /*# sourceMappingURL=style.css.map */

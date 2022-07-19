@@ -1,0 +1,93 @@
+
+
+.contenedor-formulario{
+    padding: 20px;
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+
+    .form-label{
+        display: block;
+        color: white;
+        font-size: 20px;
+        font-weight: bold;
+        position: relative;
+        font-weight: bolder;
+        padding-bottom: 5px;
+    }
+
+    .formulario{
+        background-color: $colorPrincipal;
+        width: 90%;
+        max-width: 650px;
+        margin: auto;
+        padding: 5px 35px;
+        margin-top: 30px;
+        border-radius: 3px;
+
+        .form-textarea{
+            background-color: $colorGris;
+            border: none;
+            outline: none;
+            border-bottom: 2px solid white;
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 20px;
+            border-radius: 2px;
+            font-size: 18px;
+            color: white;
+        }
+
+        .form-input{
+            background-color: $colorGris;
+            border: none;
+            outline: none;
+            border-bottom: 2px solid white;
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 20px;
+            border-radius: 2px;
+            font-size: 18px;
+            color: white;
+        }
+
+        .form-header{
+
+            .form-titulo{
+                color: white;
+                font-weight: bold;
+                font-size: 30px;
+                padding-top: 20px;
+                padding-bottom: 30px;
+            }
+
+        }
+
+        .form-textarea{
+            resize: vertical;
+            height: 200px;
+            max-height: 300px;
+            min-height: 50px;
+        }
+        
+        .form-boton{
+            width: 100%;
+            outline: none;
+            background-color: $colorGris;
+            font-size: 16px;
+            color: black;
+            font-weight: bold;
+            padding: 15px 0;
+            cursor: pointer;
+            transition: all .5s ease;
+
+            &:hover{
+                background-color: $colorPrincipal;
+                color: white;
+            }
+
+        }
+
+    }   
+    
+}

@@ -1,21 +1,41 @@
+/* Bienvenido */
 
-/* Multiplicación */
+let bienvenida = prompt("Bienvenido a la página oficial de Challwan. Para continuar escriba: 'continuar'");
 
-/* let numero1 = 5;
+while(bienvenida != "continuar") {
+    alert("ingresaste " + bienvenida);
+    bienvenida = prompt("Bienvenido a la página oficial de Challwan. Para continuar escriba: 'continuar'")
+}
 
-let numero2 = 10;
+/* Productos */
 
-let resultado = numero1 * numero2;
+let productos = prompt("En nuestra página encontrarás prodcutos sobre pesca. Escriba 'ok' si desea continuar");
+while(productos != "ok") {
+    alert("ingresaste " + productos);
+    productos = prompt("En nuestra página encontrarás prodcutos sobre pesca. Escriba 'ok' si desea continuar");
+}
 
-alert ("El resultado es: " + resultado) */
-
-
-
-
-/* let dato = prompt("Ingrese año de Nacimiento:");
+/* Edad */
 
 const anio_actual = 2022;
 
-let edad = anio_actual - dato;
+let anio_nacimiento = parseInt(prompt("Ingrese su fecha de nacimiento"));
 
-alert(edad); */
+if(isNaN(anio_nacimiento)){
+    alert("No ingresaste una año")
+}
+
+else{
+
+    let edad = anio_actual - anio_nacimiento;
+
+    alert("Tu edad es: " + edad)
+
+    if(edad < 18){
+        alert("Eres menor de edad, no puedes ingresar a la web")
+    }
+    
+    else{
+        alert("Bienvenido a la web de CHALLWAN")
+    }
+}
