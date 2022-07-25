@@ -1,41 +1,31 @@
-/* Bienvenido */
 
-let bienvenida = prompt("Bienvenido a la página oficial de Challwan. Para continuar escriba: 'continuar'");
 
-while(bienvenida != "continuar") {
-    alert("ingresaste " + bienvenida);
-    bienvenida = prompt("Bienvenido a la página oficial de Challwan. Para continuar escriba: 'continuar'")
+function seisCuotas (precioLinterna, seis){
+    return precioLinterna / seis
 }
 
-/* Productos */
-
-let productos = prompt("En nuestra página encontrarás prodcutos sobre pesca. Escriba 'ok' si desea continuar");
-while(productos != "ok") {
-    alert("ingresaste " + productos);
-    productos = prompt("En nuestra página encontrarás prodcutos sobre pesca. Escriba 'ok' si desea continuar");
+function doceCuotas (precioLinterna, doce){
+    return precioLinterna / doce
 }
 
-/* Edad */
+const precioLinterna = 6000;
+let seis = 6;
+let doce = 12;
+let cuotas = prompt("Está a punto de comprar Linterna Táctica a un precio de $6000. ¿Desea 6 o 12 cuotas?");
+let resultadoSeis = seisCuotas (precioLinterna, seis);
+let resultadoDoce = doceCuotas (precioLinterna, doce);
 
-const anio_actual = 2022;
+if (cuotas == 6) {
+    let cantidadSeisCuotas = confirm("Desea escoger 6 cuotas?")
+    alert ("Usted ha elegido " + seis + " cuotas del producto a comprar. Con un total de " + resultadoSeis + " por mes")
+}
 
-let anio_nacimiento = parseInt(prompt("Ingrese su fecha de nacimiento"));
-
-if(isNaN(anio_nacimiento)){
-    alert("No ingresaste una año")
+else if(cuotas == 12){
+        let cantidadDoceCuotas = confirm("Desea escoger 12 cuotas?")
+        alert ("Usted ha elegido " + doce + " cuotas del producto a comprar. Con un total de " + resultadoDoce + " por mes")
 }
 
 else{
-
-    let edad = anio_actual - anio_nacimiento;
-
-    alert("Tu edad es: " + edad)
-
-    if(edad < 18){
-        alert("Eres menor de edad, no puedes ingresar a la web")
-    }
-    
-    else{
-        alert("Bienvenido a la web de CHALLWAN")
-    }
+    alert ("Por favor, seleccione la cantidad de cuotas que desee")
 }
+
