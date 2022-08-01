@@ -122,7 +122,7 @@
   justify-items: center;
 }
 
-.tienda .productos .productos6 .reel {
+.tienda .productos .productos6 .objeto {
   margin-bottom: 20px;
   width: 100%;
   display: -webkit-box;
@@ -137,13 +137,17 @@
           align-items: center;
 }
 
-.tienda .productos .productos6 .reel .cta {
+.tienda .productos .productos6 .objeto h3 {
+  font-weight: bold;
+}
+
+.tienda .productos .productos6 .objeto .cta {
   border: none;
   background: none;
   margin-bottom: 10px;
 }
 
-.tienda .productos .productos6 .reel .cta span {
+.tienda .productos .productos6 .objeto .cta span {
   padding-bottom: 7px;
   letter-spacing: 4px;
   font-size: 10px;
@@ -151,31 +155,31 @@
   text-transform: uppercase;
 }
 
-.tienda .productos .productos6 .reel .cta svg {
+.tienda .productos .productos6 .objeto .cta svg {
   -webkit-transform: translateX(-8px);
           transform: translateX(-8px);
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
 
-.tienda .productos .productos6 .reel .cta:hover svg {
+.tienda .productos .productos6 .objeto .cta:hover svg {
   -webkit-transform: translateX(0);
           transform: translateX(0);
 }
 
-.tienda .productos .productos6 .reel .cta:active svg {
+.tienda .productos .productos6 .objeto .cta:active svg {
   -webkit-transform: scale(0.9);
           transform: scale(0.9);
 }
 
-.tienda .productos .productos6 .reel .cta .hover-underline-animation {
+.tienda .productos .productos6 .objeto .cta .hover-underline-animation {
   position: relative;
   color: black;
   padding-bottom: 5px;
   font-size: 12px;
 }
 
-.tienda .productos .productos6 .reel .cta .hover-underline-animation:after {
+.tienda .productos .productos6 .objeto .cta .hover-underline-animation:after {
   content: "";
   position: absolute;
   width: 100%;
@@ -193,14 +197,14 @@
   transition: transform 0.25s ease-out, -webkit-transform 0.25s ease-out;
 }
 
-.tienda .productos .productos6 .reel .cta:hover .hover-underline-animation:after {
+.tienda .productos .productos6 .objeto .cta:hover .hover-underline-animation:after {
   -webkit-transform: scaleX(0.8);
           transform: scaleX(0.8);
   -webkit-transform-origin: bottom left;
           transform-origin: bottom left;
 }
 
-.tienda .productos .productos6 .reel img {
+.tienda .productos .productos6 .objeto img {
   width: 60%;
   margin-bottom: 10px;
   border-radius: 10px;
@@ -228,12 +232,12 @@
 }
 
 .clima .climaContenedor .tituloClima h3 {
-  color: black;
+  color: white;
   font-weight: bold;
 }
 
 .clima .climaContenedor .tituloClima p {
-  color: black;
+  color: white;
   font-weight: bold;
 }
 
