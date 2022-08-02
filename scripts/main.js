@@ -35,7 +35,7 @@ class productos{
 
 
 
-let productos_pesca = new Array();
+const productos_pesca = [];
     productos_pesca.push(new productos("Caña mosca","Redington","Caña para mosca N°8",30000,9,1243));
     productos_pesca.push(new productos("Caja para mosca (4 divisiones)","Foam","Caja para moscas con 4 divisiones. 14 x 9",4500,15,1232));
     productos_pesca.push(new productos("Reel para caña mosca","Redington","Zero Black / Sand 3-4. ",20000,7,1213));
