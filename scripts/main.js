@@ -15,20 +15,22 @@ class productos{
 
 
     sumaIva(){
+
         this.precio = this.precio * 1.21;
+
     }
 
 
     info(){
+
       return "Nombre: " + this.titulo + "\n" + "Marca: " + this.marca + "\n" + "Caracteristicas: " + this.caracteristicas + "\n" + "Precio: $" + this.precio + "\n" +  "Stock: " + this.stock;
+
     }
 
     listado(){
-        return this.titulo + " /" + " $" + this.precio + " /" + " Stock: " + this.stock;
-    }
 
-    encontrarProducto(){
         return this.titulo + " /" + " $" + this.precio + " /" + " Stock: " + this.stock;
+        
     }
 
 }

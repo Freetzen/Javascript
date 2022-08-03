@@ -1,0 +1,126 @@
+
+@media screen and (min-width: 1000px){
+
+
+#header{
+    background: url(../imagenes/reel.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+    height: 100vh;
+    width: 100%;
+
+    .navbar{
+        position: sticky;
+        top: 0px;
+        position: fixed;
+        width: 100%;
+        z-index: 999;
+
+        .container-fluid{
+            color: black;
+            margin-left: 13%;
+
+            a{
+                img{
+                    width: 170px;
+                    
+                }
+            }
+        }
+
+    }
+
+    .navbar-light{
+        background: white;
+        
+    }
+
+    .navbar-collapse{
+        margin-right: 13%;
+    }
+
+    nav{
+
+        ul{
+
+            li{
+
+                a{
+                    text-decoration: none;
+                    color: rgb(113,159,65);
+                    font-size: 27px;
+                    text-align: center;
+                }
+
+            }
+
+        }
+
+    }
+
+}    
+
+
+.info{
+    width: 75%;
+    display: flex;
+    margin: auto;
+    margin-top: 50px;
+}
+
+.tienda{
+    width: 65%;
+    margin: auto;
+    margin-top: 50px;
+
+    .tituloTienda{
+        margin-top: 20px;
+    
+
+    }
+
+    .productos{
+
+        .productos6{
+            grid-template-columns: 1fr 1fr 1fr;
+
+            .objeto{
+
+                margin-bottom: 40px;
+
+                img{
+                    
+                    width: 30%;
+                }
+
+                .cta{
+                   
+                     .hover-underline-animation{
+
+                        font-size: 15px;
+                     }
+                       
+
+                }
+    
+            }
+
+        }
+
+    }
+    
+
+}
+
+.clima{
+
+    width: 75%;
+    margin: auto;
+    margin-top: 50px;
+}
+
+
+}

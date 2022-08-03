@@ -352,4 +352,78 @@ footer .logoFooter img {
   background-color: rgba(114, 159, 65, 0.642);
   color: white;
 }
+
+@media screen and (min-width: 1000px) {
+  #header {
+    background: url(../imagenes/reel.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+    height: 100vh;
+    width: 100%;
+  }
+  #header .navbar {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0px;
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+  }
+  #header .navbar .container-fluid {
+    color: black;
+    margin-left: 13%;
+  }
+  #header .navbar .container-fluid a img {
+    width: 170px;
+  }
+  #header .navbar-light {
+    background: white;
+  }
+  #header .navbar-collapse {
+    margin-right: 13%;
+  }
+  #header nav ul li a {
+    text-decoration: none;
+    color: #719f41;
+    font-size: 27px;
+    text-align: center;
+  }
+  .info {
+    width: 75%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin: auto;
+    margin-top: 50px;
+  }
+  .tienda {
+    width: 65%;
+    margin: auto;
+    margin-top: 50px;
+  }
+  .tienda .tituloTienda {
+    margin-top: 20px;
+  }
+  .tienda .productos .productos6 {
+    -ms-grid-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+  }
+  .tienda .productos .productos6 .objeto {
+    margin-bottom: 40px;
+  }
+  .tienda .productos .productos6 .objeto img {
+    width: 30%;
+  }
+  .tienda .productos .productos6 .objeto .cta .hover-underline-animation {
+    font-size: 15px;
+  }
+  .clima {
+    width: 75%;
+    margin: auto;
+    margin-top: 50px;
+  }
+}
 /*# sourceMappingURL=style.css.map */
