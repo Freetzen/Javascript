@@ -317,7 +317,7 @@ footer .logoFooter img {
   margin-bottom: 20px;
   border-radius: 2px;
   font-size: 18px;
-  color: white;
+  color: black;
 }
 
 .contenedor-formulario .formulario .form-header .form-titulo {
@@ -333,6 +333,7 @@ footer .logoFooter img {
   height: 200px;
   max-height: 300px;
   min-height: 50px;
+  color: black;
 }
 
 .contenedor-formulario .formulario .form-boton {
@@ -363,6 +364,12 @@ footer .logoFooter img {
     position: relative;
     height: 100vh;
     width: 100%;
+  }
+  #header .achedos {
+    text-align: center;
+    color: white;
+    padding-top: 25vh;
+    font-size: 150px;
   }
   #header .navbar {
     position: -webkit-sticky;
