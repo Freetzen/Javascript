@@ -76,6 +76,17 @@
     display: flex;
     margin: auto;
     margin-top: 50px;
+    
+    .nosotros{
+        
+        h1{
+            font-size: 40px;
+        }
+
+        p{
+            font-size: 25px;
+        }
+    }
 }
 
 .tienda{
@@ -94,7 +105,7 @@
         .productos6{
             grid-template-columns: 1fr 1fr 1fr;
 
-            .objeto{
+            div{
 
                 margin-bottom: 40px;
 
