@@ -90,7 +90,7 @@
 }
 
 .tienda{
-    width: 65%;
+    max-width: 75%;
     margin: auto;
     margin-top: 50px;
 
@@ -104,6 +104,8 @@
 
         .productos6{
             grid-template-columns: 1fr 1fr 1fr;
+            grid-column-gap: 1.5rem;
+            grid-row-gap: 2rem;
 
             div{
 
@@ -111,7 +113,7 @@
 
                 img{
                     
-                    width: 30%;
+                    width: 70%;
                 }
 
                 .cta{

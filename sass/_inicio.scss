@@ -1,4 +1,5 @@
 
+
 #header{
     background: url(../imagenes/reel.jpg);
     background-size: cover;
@@ -11,25 +12,6 @@
     display: flex;
     justify-content: center;
 
-    .prueba{
-        display: flex;
-        align-items: center;
-
-        input{
-            border-radius: 5px;
-            padding-right: 5px;
-        }
-
-        button{
-            border-radius: 5px;
-        }
-
-        p{
-            padding-right: 10px;
-            font-size: 17px;
-            margin-bottom: 0px;
-        }
-    }
 
     .navbar-collapse {
         flex-grow: 0;
@@ -148,7 +130,7 @@
 
         .productos6{
             display: grid;
-            grid-template-columns: 1fr 1fr;
+            grid-template-columns: 1fr;
             justify-items: center;
 
             div{
@@ -162,62 +144,37 @@
                     font-weight: bold;
                 }
 
-                .cta {
+                button {
+                    width: 9em;
+                    height: 3em;
+                    border-radius: 30em;
+                    font-size: 15px;
+                    font-family: inherit;
                     border: none;
-                    background: none;
-                    margin-bottom: 10px;
-                    width: "30";
-                    height: "10";
-
-                    span {
-                        padding-bottom: 7px;
-                        letter-spacing: 4px;
-                        font-size: 10px;
-                        padding-right: 15px;
-                        text-transform: uppercase;
-                    }
-
-                    svg {
-                        transform: translateX(-8px);
-                        transition: all 0.3s ease;
-                    }
-
-                    &:hover svg {
-                        transform: translateX(0);
-                    }
-
-                    &:active svg {
-                        transform: scale(0.9);
-                    }
-
-                    .hover-underline-animation {
-                        position: relative;
-                        color: black;
-                        padding-bottom: 5px;
-                        font-size: 12px;
-
-                        &:after {
-                            content: "";
-                            position: absolute;
-                            width: 100%;
-                            transform: scaleX(0);
-                            height: 1.5px;
-                            bottom: 0;
-                            left: 0;
-                            background-color: #000000;
-                            transform-origin: bottom right;
-                            transition: transform 0.25s ease-out;
-                        }
-
-                           
-                    }
-
-                    &:hover .hover-underline-animation:after {
-                        transform: scaleX(0.8);
-                        transform-origin: bottom left;
-                    }
-
-                }
+                    position: relative;
+                    overflow: hidden;
+                    z-index: 1;
+                    box-shadow: 6px 6px 12px #c5c5c5,
+                                -6px -6px 12px #ffffff;
+                   }
+                   
+                   button::before {
+                    content: '';
+                    width: 0;
+                    height: 3em;
+                    border-radius: 30em;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    background-image: linear-gradient(to right, #0fd850 0%, #f9f047 100%);
+                    transition: .5s ease;
+                    display: block;
+                    z-index: -1;
+                   }
+                   
+                   button:hover::before {
+                    width: 9em;
+                   }
 
                 img{
                     width: 60%;
@@ -281,6 +238,7 @@
 }
 
 footer{
+    background-color: #f1f1f1;
 
     .container{
         a{
@@ -289,6 +247,8 @@ footer{
     }
 
     .text-center{
+        background-color: $colorPrincipal;
+        
 
         a{
             text-decoration: none;

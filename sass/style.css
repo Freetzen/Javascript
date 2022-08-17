@@ -24,30 +24,6 @@
           justify-content: center;
 }
 
-#header .prueba {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-#header .prueba input {
-  border-radius: 5px;
-  padding-right: 5px;
-}
-
-#header .prueba button {
-  border-radius: 5px;
-}
-
-#header .prueba p {
-  padding-right: 10px;
-  font-size: 17px;
-  margin-bottom: 0px;
-}
-
 #header .navbar-collapse {
   -webkit-box-flex: 0;
       -ms-flex-positive: 0;
@@ -165,8 +141,8 @@
 .tienda .productos .productos6 {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr 1fr;
-      grid-template-columns: 1fr 1fr;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
   justify-items: center;
 }
 
@@ -189,69 +165,38 @@
   font-weight: bold;
 }
 
-.tienda .productos .productos6 div .cta {
+.tienda .productos .productos6 div button {
+  width: 9em;
+  height: 3em;
+  border-radius: 30em;
+  font-size: 15px;
+  font-family: inherit;
   border: none;
-  background: none;
-  margin-bottom: 10px;
-  width: "30";
-  height: "10";
-}
-
-.tienda .productos .productos6 div .cta span {
-  padding-bottom: 7px;
-  letter-spacing: 4px;
-  font-size: 10px;
-  padding-right: 15px;
-  text-transform: uppercase;
-}
-
-.tienda .productos .productos6 div .cta svg {
-  -webkit-transform: translateX(-8px);
-          transform: translateX(-8px);
-  -webkit-transition: all 0.3s ease;
-  transition: all 0.3s ease;
-}
-
-.tienda .productos .productos6 div .cta:hover svg {
-  -webkit-transform: translateX(0);
-          transform: translateX(0);
-}
-
-.tienda .productos .productos6 div .cta:active svg {
-  -webkit-transform: scale(0.9);
-          transform: scale(0.9);
-}
-
-.tienda .productos .productos6 div .cta .hover-underline-animation {
   position: relative;
-  color: black;
-  padding-bottom: 5px;
-  font-size: 12px;
+  overflow: hidden;
+  z-index: 1;
+  -webkit-box-shadow: 6px 6px 12px #c5c5c5, -6px -6px 12px #ffffff;
+          box-shadow: 6px 6px 12px #c5c5c5, -6px -6px 12px #ffffff;
 }
 
-.tienda .productos .productos6 div .cta .hover-underline-animation:after {
-  content: "";
+.tienda .productos .productos6 div button::before {
+  content: '';
+  width: 0;
+  height: 3em;
+  border-radius: 30em;
   position: absolute;
-  width: 100%;
-  -webkit-transform: scaleX(0);
-          transform: scaleX(0);
-  height: 1.5px;
-  bottom: 0;
+  top: 0;
   left: 0;
-  background-color: #000000;
-  -webkit-transform-origin: bottom right;
-          transform-origin: bottom right;
-  -webkit-transition: -webkit-transform 0.25s ease-out;
-  transition: -webkit-transform 0.25s ease-out;
-  transition: transform 0.25s ease-out;
-  transition: transform 0.25s ease-out, -webkit-transform 0.25s ease-out;
+  background-image: -webkit-gradient(linear, left top, right top, from(#0fd850), to(#f9f047));
+  background-image: linear-gradient(to right, #0fd850 0%, #f9f047 100%);
+  -webkit-transition: .5s ease;
+  transition: .5s ease;
+  display: block;
+  z-index: -1;
 }
 
-.tienda .productos .productos6 div .cta:hover .hover-underline-animation:after {
-  -webkit-transform: scaleX(0.8);
-          transform: scaleX(0.8);
-  -webkit-transform-origin: bottom left;
-          transform-origin: bottom left;
+.tienda .productos .productos6 div button:hover::before {
+  width: 9em;
 }
 
 .tienda .productos .productos6 div img {
@@ -305,8 +250,16 @@
   border-radius: 10px;
 }
 
+footer {
+  background-color: #f1f1f1;
+}
+
 footer .container a {
   text-decoration: none;
+}
+
+footer .text-center {
+  background-color: rgba(114, 159, 65, 0.642);
 }
 
 footer .text-center a {
@@ -463,7 +416,7 @@ footer .logoFooter img {
     font-size: 25px;
   }
   .tienda {
-    width: 65%;
+    max-width: 75%;
     margin: auto;
     margin-top: 50px;
   }
@@ -473,12 +426,14 @@ footer .logoFooter img {
   .tienda .productos .productos6 {
     -ms-grid-columns: 1fr 1fr 1fr;
         grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 1.5rem;
+    grid-row-gap: 2rem;
   }
   .tienda .productos .productos6 div {
     margin-bottom: 40px;
   }
   .tienda .productos .productos6 div img {
-    width: 30%;
+    width: 70%;
   }
   .tienda .productos .productos6 div .cta .hover-underline-animation {
     font-size: 15px;
