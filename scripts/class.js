@@ -1,25 +1,17 @@
 
 /* Clase constructora */
 
-class Productos{
-    constructor (titulo,marca,caracteristicas,precio,stock,id,foto){
-        this.titulo = titulo.toUpperCase(),
-        this.marca = marca,
-        this.caracteristicas = caracteristicas,
-        this.precio = parseFloat(precio),
-        this.stock = stock,
+class Producto{
+
+    constructor (id,nombre,precio,img,marca,descripcion){
+      
         this.id = id,
-        this.foto = foto
+        this.nombre = nombre,
+        this.precio = precio,
+        this.img = img,
+        this.marca = marca,
+        this.descripcion = descripcion,
+        this.cantidad = 1;
     }
-
-
-    
-    info(){
-
-      return "Nombre: " + this.titulo + "\n" + "Marca: " + this.marca + "\n" + "Caracteristicas: " + this.caracteristicas + "\n" + "Precio: $" + this.precio + "\n" +  "Stock: " + this.stock;
-
-    }
-
-
 
 }

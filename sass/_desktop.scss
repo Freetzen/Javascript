@@ -1,75 +1,25 @@
 
 @media screen and (min-width: 1000px){
 
-
-#header{
-    background: url(../imagenes/reel.jpg);
-    background-size: cover;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    background-position: center;
-    position: relative;
-    height: 100vh;
-    width: 100%;
-
-    .achedos{
-        text-align: center;
-        color: white;
-        padding-top: 25vh;
-        font-size: 150px;
-    }
-
-    .navbar{
-        position: sticky;
-        top: 0px;
-        position: fixed;
-        width: 100%;
-        z-index: 999;
-
-        .container-fluid{
-            color: black;
-            margin-left: 13%;
-
-            a{
-                img{
-                    width: 170px;
-                    
-                }
+.container{
+    .logo{
+        a{
+            img{
+                width: 170px;
+                height: 80px;
             }
         }
-
     }
+}
 
-    .navbar-light{
-        background: white;
-        
-    }
+#iconoCarrito{
+    color: $colorPrincipal;
+}
 
-    .navbar-collapse{
-        margin-right: 13%;
-    }
-
-    nav{
-
-        ul{
-
-            li{
-
-                a{
-                    text-decoration: none;
-                    color: rgb(113,159,65);
-                    font-size: 27px;
-                    text-align: center;
-                }
-
-            }
-
-        }
-
-    }
-
-}    
-
+#badgeCarrito{
+    font-size: 0.8rem;
+    background-color: $colorPrincipal !important;
+}
 
 .info{
     width: 75%;
@@ -80,11 +30,11 @@
     .nosotros{
         
         h1{
-            font-size: 40px;
+            font-size: 35px;
         }
 
         p{
-            font-size: 25px;
+            font-size: 20px;
         }
     }
 }

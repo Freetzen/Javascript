@@ -1,311 +1,254 @@
 
-//Arreglo de productos
+class ProductosPesca{
 
-let productos = [
+
+    productosXDefecto(){
+
+        productos = [
 
             {
-                "titulo": "Caña mosca",
-                "marca": "Redington",
-                "caracteristicas": "Caña para mosca N°8",
-                "precio": 30000,
-                "stock": 9,
                 "id": 1,
-                "foto": "caña.jpg",
+                "nombre": "Caña mosca",
+                "marca": "Redington",
+                "descripcion": "Caña para mosca N°8",
+                "precio": 8858,
+                "img": "caña.jpg",
             },
             {
-                "titulo": "Caja para mosca (4 divisiones)",
-                "marca": "Foam",
-                "caracteristicas": "Caja para moscas con 4 divisiones. 14 x 9",
-                "precio": 4500,
-                "stock": 15,
                 "id": 2,
-                "foto": "caja.jpg",
+                "nombre": "Caja para mosca (4 divisiones)",
+                "marca": "Foam",
+                "descripcion": "Caja para moscas con 4 divisiones. 14 x 9",
+                "precio": 4500,
+                "img": "caja.jpg",
             },
 
             {
-                "titulo": "Reel para caña mosca",
-                "marca": "Redington",
-                "caracteristicas": "Zero Black / Sand 3-4.",
-                "precio": 20000,
-                "stock": 7,
                 "id": 3,
-                "foto": "reel.jpg",
+                "nombre": "Reel para caña mosca",
+                "marca": "Redington",
+                "descripcion": "Zero Black / Sand 3-4.",
+                "precio": 20000,
+                "img": "reel.jpg",
             },
             {
-                "titulo": "Linea para mosca",
-                "marca": "Rio",
-                "caracteristicas": "Línea Hundimiento RIO INTOUCH 24 FT SINK TIP",
-                "precio": 8000,
-                "stock": 13,
                 "id": 4,
-                "foto": "linea.jpg",
+                "nombre": "Linea para mosca",
+                "marca": "Rio",
+                "descripcion": "Línea Hundimiento RIO INTOUCH 24 FT SINK TIP",
+                "precio": 8000,
+                "img": "linea.jpg",
             },
             {
-                "titulo": "Wader Neoprene",
-                "marca": "Waterdog",
-                "caracteristicas": "Waders Neoprene Waterdog talle L",
-                "precio": 26500,
-                "stock": 6,
                 "id": 5,
-                "foto": "wader.jpg",
+                "nombre": "Wader Neoprene",
+                "marca": "Waterdog",
+                "descripcion": "Waders Neoprene Waterdog talle L",
+                "precio": 26500,
+                "img": "wader.jpg",
             },
             {
-                "titulo": "Riñonera",
-                "marca": "Kunnan",
-                "caracteristicas": "Riñonera Kunnan. 4 compartimientos",
-                "precio": 5300,
-                "stock": 5,
                 "id": 6,
-                "foto": "riñonera.jpg",
+                "nombre": "Riñonera",
+                "marca": "Kunnan",
+                "descripcion": "Riñonera Kunnan. 4 compartimientos",
+                "precio": 5300,
+                "img": "riñonera.jpg",
             }
+
         ]
 
+
+        this.cargarProductos(productos);
         
-
-/* Agregar Objetos del Array "productos" a la web */
-    productos.forEach((producto) =>{
-    const contenedorDiv = document.getElementById("productosTienda");
-        let crearContenedor = document.createElement('div');
-        crearContenedor.innerHTML = `
-        <div class="objeto">
-        <h3>${producto.titulo}</h3>
-        <img src="./imagenes/ecommerce/${producto.foto}" alt="">
-        <p>Marca: ${producto.marca}</p>
-        <p>${producto.caracteristicas}</p>
-        <p>Stock: ${producto.stock}</p>
-        <p>Precio: $${producto.precio}</p>
-        <button>Añadir al carrito</button>
-        </div>
-        `
-        contenedorDiv.appendChild(crearContenedor); 
-    })
+        this.mostrarCarrito();
+        
+        this.actualizarContador();
+             
+    }
 
 
-/* Agregar Producto */
-
-let productos_pesca = new Array ();
-
-let errores = document.getElementById("errores");
-
-let productosTienda = document.getElementById("productosTienda")
-
-let cargar_datos = document.getElementById("cargar_datos");
-
-let enterProducto = document.getElementById("rutaFoto");
-
-
-
-
-let registrado = prompt("ya estas registrado? si no lo estas, escribe 'no'");
-if (registrado == "no") {
-
-    let buenas = "bienvenido " + prompt("Como es tu nombre?");
-
-    localStorage.setItem("lista", JSON.stringify(buenas)); /* "lista" es una key a llamar en getItem, esto guarda la respuesta del prompt de arriba */
-
-
-} else {
-    alert(localStorage.getItem("lista"))
-}
-
-
-
-
-cargar_datos.addEventListener("click",()=>{
-
-    if(validacion()){
-
-            crearProducto();
-
+    storage(){ 
+       
+        localStorage.setItem("carrito",JSON.stringify(carrito));
 
     }
 
 
+    cargarProductos(productos){ 
+        
+        const divProductos = document.querySelector("#productos");
 
-});
+        divProductos.innerHTML = "";
 
-enterProducto.addEventListener("keypress",(event)=>{
+        if(productos.length > 0) {
 
-    if (event.keyCode === 13){
-
-        let dato = enterProducto.value;
-        crearProducto(dato);
-        newProducto.value = "";
-
-
-    }
-
-
-})
-
-
-
-function validacion(){
-
-    errores.innerHTML = "";
-
-    let input_titulo = (document.getElementById("tituloProducto").value).toUpperCase();
-    let input_marca = document.getElementById("marcaProducto").value;
-    let input_caracteristicas = document.getElementById("caracteristicasProducto").value;
-    let input_precio = document.getElementById("precioProducto").value;
-    let input_stock = document.getElementById("stockProducto").value;
-    let input_id = document.getElementById("idProducto").value;
-    let input_foto = document.getElementById("rutaFoto").value;
-
-    let avisosMensajes = new Array();
+            productos.forEach((producto) => {
     
-    if(!input_titulo){
+                let prod = document.createElement("div");
+                prod.setAttribute("id", "row_" + producto.id);    
         
-        avisosMensajes.push("Ingrese un Titulo.");
+                prod.innerHTML = `
+                <div class="objeto">
+                <h3>${producto.nombre}</h3>
+                <img src="./imagenes/ecommerce/${producto.img}" alt="" class="imgProd-${producto.id}}">
+                <p class="marcaProducto">Marca: ${producto.marca}</p>
+                <p>${producto.descripcion}</p>
+                <p class="precio">$${producto.precio}</p>
+                <a href="javascript:addCarrito(${producto.id})"><button id="botonCarrito">Añadir al carrito</button></a>
+                </div>
+                `;
+    
+                divProductos.appendChild(prod);
 
-
+            })
+            
+        } 
+      
     }
 
-    if(!input_marca){
 
-        avisosMensajes.push("Ingrese una Marca.");
+    agregaCarrito(prodI){
+        
+        
+       const prodEx = carrito.some( producto => producto.id === prodI.id );
 
+       if(prodEx){
+          
+           const articulos = carrito.map( producto => {
 
+               if(producto.id === prodI.id){
+
+                   producto.cantidad++;
+
+                   return producto;
+                   
+               }
+               
+               else{
+
+                   return producto;
+
+               }
+         
+
+           })
+
+            alert("Agregado nuevamente");
+    
+       }
+
+       else{
+           carrito.push(prodI);
+          alert("Agregado");
+
+       }
+
+       this.actualizarCarrito();
     }
 
-    if(!input_caracteristicas){
 
-        avisosMensajes.push("Ingrese una Caracteristica.");
+    contarProductos(){
 
+        let contadorProductos = 0;
 
-    }
+        carrito.forEach((producto) => {
 
-    if(!input_precio || input_precio <= 0){
-
-        avisosMensajes.push("Ingrese un Precio.");
-
-
-    }
-
-    if(!input_stock || input_stock <= 0){
-
-        avisosMensajes.push("Ingrese cantidad de Stock.");
-
-
-    }
-
-    if(!input_id){
-
-        avisosMensajes.push("Ingrese un ID del producto.");
-
-
-    }
-
-    if(!input_foto){
-
-        avisosMensajes.push("Ingrese una ruta de imagen.");
-
-
-    }
-
-    if(avisosMensajes.length>0){
-
-        let lista = document.createElement("ul");
-        lista.textContent = "No ha sido posible cargar los datos";
-
-        avisosMensajes.forEach(informacion => {
-
-            lista.appendChild(crearLista(informacion));
+            contadorProductos = contadorProductos + parseInt(producto.cantidad);
         })
 
-        errores.appendChild(lista);
+        return contadorProductos;
+    }
+
+
+    actualizarCarrito(){
+
+        
+        this.actualizarContador();
+
+        
+        this.mostrarCarrito();
+
+        
+        this.storage();
+
+        
+    }
+
+
+    actualizarContador(){ 
+
+        let totalArticulos = this.contarProductos();
+
+        let countCarrito = document.querySelector("#badgeCarrito");
+
+        countCarrito.innerHTML = totalArticulos;
 
     }
 
 
+    mostrarCarrito(){ 
+
+        let detalleCarrito = document.querySelector("#idCarrito");
     
-  return avisosMensajes.length == 0;
+        detalleCarrito.innerHTML = '';
+
+        let total = 0;
+
+        carrito.forEach((producto) => {
+           
+
+            const row = document.createElement("div");
+            row.classList.add("row");
+            
+            total += parseInt(producto.precio);
+
+            row.innerHTML = `
+                        <div class="col-3 d-flex align-items-center p-2 border-bottom">
+                            <img src="${producto.img}" width="80"/>
+                        </div>
+                        <div class="col-3 d-flex align-items-center p-2 border-bottom">
+                            ${producto.nombre}
+                        </div>
+                        <div class="col-3 d-flex align-items-center justify-content-start p-2 border-bottom">
+                            $ ${producto.precio}
+                        </div>
+                        <div class="col-1 d-flex align-items-center justify-content-end p-2 border-bottom">
+                            ${producto.cantidad}
+                        </div>
+                        <div class="col-2 d-flex align-items-center justify-content-center p-2 border-bottom">
+                            <a href="javascript:eliminar(${producto.id})">
+                            <i class="fa-solid fa-trash" id="botonEliminar"></i>
+                            </a>
+                        </div>`;
+    
+            
+            detalleCarrito.appendChild(row);
+
+        })
+
+        let row = document.createElement("div");
+        row.classList.add("row");
+        
+        row.innerHTML = `   
+                        <div class="col-4 d-flex align-items-center justify-content-start p-2 border-bottom">
+                            Total a pagar:
+                        </div>
+
+                        <div class="col-8 d-flex align-items-center justify-content-end p-2 border-bottom">
+                            <b>$ ${total}</b>
+                        </div>`;
+
+        detalleCarrito.appendChild(row);
+    }
+
+
+    eliminarArticulo(id) { 
+
+        carrito = carrito.filter(producto => producto.id != id);
+        this.actualizarCarrito();
+            
+    }
+
 
 }
-
-
-function crearLista(informacion){
-
-    let li = document.createElement("li");
-    li.textContent = informacion;
-    return li;
-
-}
-
-
-function  crearProducto(){
-
-    let titulo = document.getElementById("tituloProducto").value;
-    let marca = document.getElementById("marcaProducto").value;
-    let caracteristicas = document.getElementById("caracteristicasProducto").value;
-    let precio = document.getElementById("precioProducto").value;
-    let stock = document.getElementById("stockProducto").value;
-    let id = document.getElementById("idProducto").value;
-    let foto = document.getElementById("rutaFoto").value;
-
-
-
-    let nuevoProducto = new Productos (titulo,marca,caracteristicas,precio,stock,id,foto);
-
-    guardar_usuario(nuevoProducto);
-
-    /* productos_pesca.push (nuevoProducto); */
-
-    crearCaja(nuevoProducto);
-}
-
-
-function crearCaja(nuevoProducto){
-
-    let nuevoDiv = document.createElement("div");
-
-
-    let nuevoH3 = document.createElement("h3");
-    nuevoDiv.id = "div"+nuevoProducto.nombre+nuevoProducto.foto;
-    nuevoH3.textContent = nuevoProducto.titulo;
-
-    let nuevaImagen = document.createElement("img");
-    nuevaImagen.src = nuevoProducto.foto;
-
-    let nuevaMarca = document.createElement("p")
-    nuevaMarca.textContent = (`Marca: ${nuevoProducto.marca}`)
-
-    let nuevaCaracteristicas = document.createElement("p")
-    nuevaCaracteristicas.textContent = (nuevoProducto.caracteristicas)
-
-    let nuevoStock = document.createElement("p");
-    nuevoStock.textContent = (`Stock: ${nuevoProducto.stock}`)
-
-    let nuevoPrecio = document.createElement("p")
-    nuevoPrecio.textContent = (`Precio: $${nuevoProducto.precio}`)
-
-    let NuevoBoton = document.createElement("button");
-    NuevoBoton.innerHTML = `<button>Añadir al carrito</button>`
-
-    nuevoDiv.appendChild(nuevoH3);
-    nuevoDiv.appendChild(nuevaImagen);
-    nuevoDiv.appendChild(nuevaMarca);
-    nuevoDiv.appendChild(nuevaCaracteristicas);
-    nuevoDiv.appendChild(nuevoStock);
-    nuevoDiv.appendChild(nuevoPrecio);
-    nuevoDiv.appendChild(NuevoBoton);
-
-    productosTienda.appendChild(nuevoDiv);
-
-    restaurar()
-
-}
-
-
-function restaurar(){
-
-    document.getElementById("tituloProducto").value = "";
-    document.getElementById("marcaProducto").value = "";
-    document.getElementById("caracteristicasProducto").value = "";
-    document.getElementById("precioProducto").value = "";
-    document.getElementById("stockProducto").value = "";
-    document.getElementById("idProducto").value = "";
-    document.getElementById("rutaFoto").value = "";
-
-}
-

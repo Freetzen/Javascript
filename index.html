@@ -14,17 +14,15 @@
     <!-- CSS -->
     <link rel="stylesheet" href="./sass/style.css">
 
+    <!-- Icono Pestaña -->
     <link rel="shortcut icon" href="./imagenes/ansuelo.png" type="image/x-icon">
 
-    <!-- Bootstrap -->
+    <!-- Bootstrap 5.2.0 -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
 
-
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://getbootstrap.com/docs/5.2/assets/css/docs.css" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
-
-
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
     <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@200&display=swap" rel="stylesheet">
 
@@ -35,45 +33,74 @@
 
   <body>
 
-    <header id="header">
+    <header class="d-flex align-items-center justify-content-center border-bottom bg-white fixed-top">
 
-        <nav class="navbar navbar-expand-lg navbar-light sticky-sm-top ">
-    
-            <div class="container-fluid">
-    
-              <a class="navbar-brand" href="./index.html"><img src="./imagenes/logo.png" alt="logo" width="100px"></a>
-    
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
- 
-              <div class="collapse navbar-collapse texto-menu" id="navbarSupportedContent">
-    
-                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-    
-                  <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="./index.html">Inicio</a>
-                  </li>
-    
-                  <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="./pages/tienda.html">Tienda</a>
-                  </li>
-    
-                  <li class="nav-item">
-                    <a class="nav-link" href="./pages/contacto.html">Contacto</a>
-                  </li>
+      <div class="container d-flex align-items-center justify-content-between">
+          
+          <div class="logo col-3 d-flex align-items-center justify-content-start">
+              <a href="./index.html"><img src="./imagenes/logo.png" alt="" width="100" height="70" alt=""></a>
+          </div>
+
+          <div class="col-3 d-flex align-items-center justify-content-end">
+
+              <a   
                   
-                </ul>
-    
-              </div>
-    
-            </div>
-    
-        </nav>
-    
-    </header>
+                  class="cart position-relative d-inline-flex" 
+                  aria-label="View your shopping cart"
+                  data-bs-toggle="offcanvas" 
+                  data-bs-target="#offcanvasRight" 
+                  aria-controls="offcanvasRight">
 
+                  <i class="fa-solid fa-bag-shopping fa-2x" id="iconoCarrito">
+                      <span class="position-absolute 
+                                   top-0 
+                                   start-100 
+                                   translate-middle 
+                                   badge 
+                                   rounded-pill 
+                                   bg-danger"
+                                   
+                                   id="badgeCarrito">
+                              0
+                      </span>
+                  </i>
+
+              </a>
+
+          </div>
+
+      </div>
+
+  </header>    
+
+  <div class="main">
+
+      <div class="offcanvas offcanvas-end " tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+          <div class="offcanvas-header">
+              <h5 id="offcanvasRightLabel">Pedido</h5>
+              <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+
+              <div id="idCarrito">
+                
+                  <div class="row">                    
+                  </div>
+
+              </div>
+
+              <div class="d-grid gap-2 col-6 mx-auto">
+                <button type="button" class="btn btn-light" id="botonFinalizar">Finalizar Compra</button>
+              </div>
+
+          </div>
+      </div>    
+
+  </div>
+
+  <section id="reelImg">
     
+  </section>
 
 
     <section class="info">
@@ -86,43 +113,19 @@
     </section>
 
 
-    <div id="div_formulario">
-
-      <div class="contenedor-formulario">
-
-        <form class="formulario">
-
-          <div class="form-header">
-            <h2 class="form-titulo">Agregar un producto</h2>
-          </div>
-
-          <input type="text" placeholder="Título"  id="tituloProducto" class="form-input">
-          <input type="text" placeholder="Marca"  id="marcaProducto" class="form-input">
-          <input type="text" placeholder="Características"  id="caracteristicasProducto" class="form-input">
-          <input type="number" placeholder="Precio"  id="precioProducto" class="form-input">
-          <input type="number" placeholder="Stock"  id="stockProducto" class="form-input">
-          <input type="text" placeholder="ID"  id="idProducto" class="form-input">
-          <input type="text" placeholder="Ruta de Imagen"  id="rutaFoto" class="form-input">
-          <button  type="button" id="cargar_datos" class="form-boton">Cargar</button>
-        </form>
-      </div>
-
-      <div id="errores">
-        
-      </div>
-
-    </div>
-
-
     <section class="tienda">
 
       <div class="productos">
 
         <div class="tituloTienda">
+          
           <h2>TIENDA</h2>
+
         </div>
         
-        <div class="productos6" id="productosTienda">
+        <div class="productos6" id="productos">
+          
+        </div>
 
       </div>
 
@@ -159,7 +162,7 @@
 
 
               <label for="Nombre" class="form-label">Nombre:</label>
-              <input type="text" id="Nombre" placeholder="Nombre" required class="form-input">
+              <input type="text" id="nombre" placeholder="Nombre" required class="form-input">
          
 
               <label for="apellido" class="form-label">Apellido:</label>
@@ -171,13 +174,17 @@
           
          
               <label for="comentario" class="form-label">Consulta</label>
-              <textarea name="comentarios" id="comentarios" placeholder="Escriba aqui..." class="form-textarea"></textarea>
+              <textarea name="comentarios" id="consulta" placeholder="Escriba aqui..." class="form-textarea"></textarea>
 
-              <input type="submit" class="form-boton" value="Enviar">
+              <button  type="button" id="enviarForm" class="form-boton">Enviar Consulta.</button>
 
       </form>
 
-  </div>
+      <div id="errores">
+        
+      </div>
+
+    </div>
 
 
     <footer class="text-center text-white">
@@ -237,12 +244,16 @@
 
 
 
-    <!-- Bootstrap -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+     <!-- JavaScript Bundle with Popper -->
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
 
     <!-- JavaScript -->
     <script src="./scripts/class.js"></script>
     <script src="./scripts/dom.js"></script>
+    <script src="./scripts/param.js"></script>
+    <script src="./scripts/librerias.js"></script>
+    <!-- <script src="./scripts/form.js"></script> -->
+
   </body>
   
 </html>

@@ -7,7 +7,21 @@
   font-weight: bold;
 }
 
-#header {
+.container .logo a img {
+  width: 170px;
+  height: 80px;
+}
+
+#iconoCarrito {
+  color: rgba(114, 159, 65, 0.642);
+}
+
+#badgeCarrito {
+  font-size: 0.8rem;
+  background-color: rgba(114, 159, 65, 0.642) !important;
+}
+
+#reelImg {
   background: url(../imagenes/reel.jpg);
   background-size: cover;
   background-attachment: fixed;
@@ -16,45 +30,24 @@
   position: relative;
   height: 100vh;
   width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
 }
 
-#header .navbar-collapse {
-  -webkit-box-flex: 0;
-      -ms-flex-positive: 0;
-          flex-grow: 0;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+.main .offcanvas {
+  background-color: rgba(114, 159, 65, 0.642);
+  color: white;
 }
 
-#header .navbar {
-  position: -webkit-sticky;
-  position: sticky;
-  top: 0px;
-  position: fixed;
-  width: 100%;
-  z-index: 999;
+.main #botonEliminar {
+  color: white;
 }
 
-#header .navbar .container-fluid {
-  color: black;
+.main #botonEliminar:hover {
+  color: red;
 }
 
-#header .navbar-light {
-  background: white;
-}
-
-#header nav ul li a {
-  text-decoration: none;
-  color: #719f41;
-  font-size: 20px;
-  text-align: center;
+.main #botonFinalizar {
+  margin-top: 30px;
+  font-weight: bold;
 }
 
 .info {
@@ -358,48 +351,16 @@ footer .logoFooter img {
 }
 
 @media screen and (min-width: 1000px) {
-  #header {
-    background: url(../imagenes/reel.jpg);
-    background-size: cover;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    background-position: center;
-    position: relative;
-    height: 100vh;
-    width: 100%;
-  }
-  #header .achedos {
-    text-align: center;
-    color: white;
-    padding-top: 25vh;
-    font-size: 150px;
-  }
-  #header .navbar {
-    position: -webkit-sticky;
-    position: sticky;
-    top: 0px;
-    position: fixed;
-    width: 100%;
-    z-index: 999;
-  }
-  #header .navbar .container-fluid {
-    color: black;
-    margin-left: 13%;
-  }
-  #header .navbar .container-fluid a img {
+  .container .logo a img {
     width: 170px;
+    height: 80px;
   }
-  #header .navbar-light {
-    background: white;
+  #iconoCarrito {
+    color: rgba(114, 159, 65, 0.642);
   }
-  #header .navbar-collapse {
-    margin-right: 13%;
-  }
-  #header nav ul li a {
-    text-decoration: none;
-    color: #719f41;
-    font-size: 27px;
-    text-align: center;
+  #badgeCarrito {
+    font-size: 0.8rem;
+    background-color: rgba(114, 159, 65, 0.642) !important;
   }
   .info {
     width: 75%;
@@ -410,10 +371,10 @@ footer .logoFooter img {
     margin-top: 50px;
   }
   .info .nosotros h1 {
-    font-size: 40px;
+    font-size: 35px;
   }
   .info .nosotros p {
-    font-size: 25px;
+    font-size: 20px;
   }
   .tienda {
     max-width: 75%;
