@@ -130,6 +130,8 @@ class ProductosPesca{
                    return producto;
 
                }
+
+               carrito = articulos; 
          
 
            })
