@@ -61,7 +61,7 @@ class ProductosPesca{
 
         this.cargarProductos(productos);
         
-        this.mostrarCarrito();
+        this.actualizarCarrito();
         
         this.actualizarContador();
              

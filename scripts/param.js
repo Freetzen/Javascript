@@ -8,7 +8,7 @@ let global;
 /* Al cargar la web. */
 document.addEventListener('DOMContentLoaded',() =>{
 
-    carrito = JSON.parse(localStorage.getItem('carrito'));
+    carrito = JSON.parse(localStorage.getItem('carrito')) || [];
     global = new ProductosPesca();
     global.productosXDefecto();
 
