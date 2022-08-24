@@ -136,13 +136,29 @@ class ProductosPesca{
 
            })
 
-            alert("Agregado nuevamente");
+           Swal.fire({
+            position: 'center',
+            icon: 'success',
+            title: 'Agregado Nuevamente.',
+            showConfirmButton: false,
+            timer: 1500
+            
+          })
     
        }
 
        else{
            carrito.push(prodI);
-          alert("Agregado");
+
+           Toastify({
+            text: "Producto Agregado.",
+            offset: {
+              x: 80, // horizontal axis - can be a number or a string indicating unity. eg: '2em'
+              y: 20 // vertical axis - can be a number or a string indicating unity. eg: '2em'
+            },
+          }).showToast();
+
+         
 
        }
 
@@ -245,11 +261,52 @@ class ProductosPesca{
     }
 
 
-    eliminarArticulo(id) { 
+    eliminarArticulo( id ) { 
 
-        carrito = carrito.filter(producto => producto.id != id);
-        this.actualizarCarrito();
+        Swal.fire({
+            title: '"Esta seguro de eliminar el producto ?"',
+            showCancelButton: true,
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Eliminar',
+            confirmButtonColor: '#719f41',
+            cancelButtonText: `Cancelar`,
+          }).then((result) => {
             
+            if (!result.isConfirmed){
+
+                Toastify({
+                    text: "No se ha eliminado.",
+                    duration: 3000,
+                    destination: "https://github.com/apvarun/toastify-js",
+                    newWindow: true,
+                    close: true,
+                    gravity: "top", // `top` or `bottom`
+                    position: "center", // `left`, `center` or `right`
+                    stopOnFocus: true, // Prevents dismissing of toast on hover
+                    style: {
+                      background: "linear-gradient(to right, #00b09b, #96c93d)",
+                    },
+                    onClick: function(){} // Callback after click
+                  }).showToast();
+
+            }
+            else{
+
+                carrito = carrito.filter( articulo => articulo.id != id);
+                this.actualizarCarrito();
+
+                Toastify({
+                    text: "Producto eliminado.",
+                    offset: {
+                      x: 50, // horizontal axis - can be a number or a string indicating unity. eg: '2em'
+                      y: 10 // vertical axis - can be a number or a string indicating unity. eg: '2em'
+                    },
+                  }).showToast();
+
+            }
+
+        })  
+
     }
 
 
