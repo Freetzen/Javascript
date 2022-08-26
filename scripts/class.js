@@ -1,5 +1,5 @@
 
-/* Clase constructora */
+/* Clases constructoras */
 
 class Producto{
 
@@ -12,6 +12,19 @@ class Producto{
         this.marca = marca,
         this.descripcion = descripcion,
         this.cantidad = 1;
+    }
+
+}
+
+
+class Formulario{
+
+    constructor(nombre,apellido,mail,consulta){
+
+        this.nombre = nombre,
+        this.apellido = apellido,
+        this.mail = mail,
+        this.consulta = consulta
     }
 
 }

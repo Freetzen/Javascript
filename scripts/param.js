@@ -4,6 +4,7 @@ let carrito = [];
 let productos = [];
 let global;
 
+let url = './scripts/json/productos.json';
 
 /* Al cargar la web. */
 document.addEventListener('DOMContentLoaded',() =>{
