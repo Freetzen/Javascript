@@ -22,6 +22,8 @@
 }
 
 #reelImg {
+  margin: 0;
+  padding: 0;
   background: url(../imagenes/reel.jpg);
   background-size: cover;
   background-attachment: fixed;
@@ -203,12 +205,13 @@
 }
 
 .clima .climaContenedor {
+  margin: 0;
+  padding: 0;
   background-image: url(../imagenes/clima.jpeg);
   background-size: cover;
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-position: center;
-  margin: 20px;
   border-radius: 10px;
   -webkit-box-shadow: 3px 12px 12px rgba(0, 0, 0, 0.762);
           box-shadow: 3px 12px 12px rgba(0, 0, 0, 0.762);

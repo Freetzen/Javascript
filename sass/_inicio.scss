@@ -25,6 +25,8 @@
 }
 
 #reelImg{
+    margin: 0;
+    padding: 0;
     background: url(../imagenes/reel.jpg);
     background-size: cover;
     background-attachment: fixed;
@@ -191,12 +193,13 @@
     margin-top: 50px;
     
     .climaContenedor{
+        margin: 0;
+        padding: 0;
         background-image: url(../imagenes/clima.jpeg);
         background-size: cover;
         background-attachment: fixed;
         background-repeat: no-repeat;
         background-position: center;
-        margin: 20px;
         border-radius: 10px;
         box-shadow: $sombra;
         text-align: center;
@@ -209,7 +212,7 @@
                 padding: 20px;
                 font-size: 20px;
             }
-            
+
         }
 
         .tituloClima{
