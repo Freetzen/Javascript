@@ -245,16 +245,8 @@
   justify-items: center;
 }
 
-.clima .climaContenedor .ciudadBuscada ul li {
-  list-style-type: none;
-}
-
 .clima .climaContenedor .ciudadBuscada .busquedaCiudad {
   margin-top: 30px;
-  background-color: white;
-  width: 200px;
-  border-radius: 10px;
-  height: 250px;
 }
 
 .clima .climaContenedor .ciudadBuscada .busquedaCiudad h2 {
@@ -271,6 +263,16 @@
 
 .clima .climaContenedor .ciudadBuscada .containerB .ciudades {
   margin-bottom: 30px;
+}
+
+.clima .climaContenedor .ciudadBuscada .containerB .ciudades .ciudad {
+  -webkit-box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+          box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  height: 250px;
+  width: 200px;
+  border-radius: 10px;
+  background-color: white;
+  margin-top: 30px;
 }
 
 .clima form .input {
