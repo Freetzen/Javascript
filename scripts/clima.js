@@ -8,7 +8,7 @@ const Api = "4d8fb5b93d4af21d66a2948710284366";
 form.addEventListener("submit", bot => {
     
     bot.preventDefault();
-  let inputVal = input.value;
+    let inputVal = input.value;
 
   const listaItems = lista.querySelectorAll(".ciudadBuscada .ciudad");
   const listaItemsArray = Array.from(listaItems);

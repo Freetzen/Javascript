@@ -174,7 +174,7 @@ class ProductosPesca{
             const row = document.createElement("div");
             row.classList.add("row");
             
-            total += parseInt(producto.precio);
+            total = total + parseInt(producto.precio) * producto.cantidad;
 
             row.innerHTML = `
                         <div class="col-3 d-flex align-items-center p-2 border-bottom">
