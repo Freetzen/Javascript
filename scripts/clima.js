@@ -1,9 +1,8 @@
-/*SEARCH BY USING A CITY NAME (e.g. athens) OR A COMMA-SEPARATED CITY NAME ALONG WITH THE COUNTRY CODE (e.g. athens,gr)*/
 const form = document.querySelector(".clima2 form");
 const input = document.querySelector(".clima2 input");
 const msg = document.querySelector(".clima2 .msg");
 const lista = document.querySelector(".ciudadBuscada .ciudades");
-/*SUBSCRIBE HERE FOR API KEY: https://home.openweathermap.org/users/sign_up*/
+
 const Api = "4d8fb5b93d4af21d66a2948710284366";
 
 form.addEventListener("submit", bot => {
@@ -11,7 +10,6 @@ form.addEventListener("submit", bot => {
     bot.preventDefault();
   let inputVal = input.value;
 
-  //check if there's already a city
   const listaItems = lista.querySelectorAll(".ciudadBuscada .ciudad");
   const listaItemsArray = Array.from(listaItems);
 
@@ -22,7 +20,7 @@ form.addEventListener("submit", bot => {
       let contenido = "";
 
       if (inputVal.includes(",")) {
-        //athens,grrrrrr->invalid country code, so we keep only the first part of inputVal
+
         if (inputVal.split(",")[1].length > 2) {
 
           inputVal = inputVal.split(",")[0];
