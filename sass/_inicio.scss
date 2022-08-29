@@ -199,38 +199,125 @@
         margin: 20px;
         border-radius: 10px;
         box-shadow: $sombra;
+        text-align: center;
+       
+
+        .msg{
+            color: white;
+
+            p{
+                padding: 20px;
+                font-size: 20px;
+            }
+            
+        }
 
         .tituloClima{
-            text-align: center;
-            padding: 10px;
 
             h3{
                 color: white;
                 font-weight: bold;
-            }
-
-            p{
-                color: white;
-                font-weight: bold;
-            }
-
-            img{
-                width: 50px;
+                padding-top: 30px;
             }
 
         }
 
-        .buscarClima{
-            text-align: center;
-            margin-bottom: 50px;
+        img{
 
-            input{
-                margin-bottom: 30px;
-                border-radius: 10px;
+            width: 50px;
+
+        }
+
+        .ciudadBuscada{
+            display: grid;
+            grid-template-columns: 1fr;
+            justify-items: center;
+
+
+            ul{
+                
+                li{
+                    list-style-type: none;
+                }
+
             }
+
+            .busquedaCiudad{
+                margin-top: 30px;
+                background-color: white;
+                width: 200px;
+                border-radius: 10px;
+                height: 250px;
+            
+                h2{
+                    padding: 15px;
+                    
+                    sup{
+                        font-size: 0.5em;
+                        padding: 0.2em 0.6em;
+                        border-radius: 30px;
+                        color: var(--text_light);
+                        background: orange;
+                    }
+                    
+                }
+                
+            }
+
+            .containerB{
+
+                .ciudades{
+                    
+                    margin-bottom: 30px;
+                }
+            }
+
+        }
+
+
+    }
+
+    form{
+        
+        .input{
+            line-height: 28px;
+            border: 2px solid transparent;
+            border-bottom-color: white;
+
+            padding: .2rem 0;
+            outline: none;
+            background-color: transparent;
+            color: white;
+            transition: .3s cubic-bezier(0.645, 0.045, 0.355, 1);
+
+            &:focus{
+                outline: none;
+                padding: .2rem 1rem;
+                border-radius: 1rem;
+                border-color: $colorPrincipal;
+
+                &::placeholder{
+                    opacity: 0;
+                    transition: opacity .3s;
+                }
+
+            }
+
+            &:hover{
+                outline: none;
+                padding: .2rem 1rem;
+                border-radius: 1rem;
+                border-color: $colorPrincipal;
+            }
+
+            &::placeholder{
+                color: white;
+            }
+
         }
 
     }
+
 
 }
 
@@ -238,9 +325,11 @@ footer{
     background-color: #f1f1f1;
 
     .container{
+
         a{
             text-decoration: none;
         }
+        
     }
 
     .text-center{

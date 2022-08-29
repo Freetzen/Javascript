@@ -212,35 +212,128 @@
   border-radius: 10px;
   -webkit-box-shadow: 3px 12px 12px rgba(0, 0, 0, 0.762);
           box-shadow: 3px 12px 12px rgba(0, 0, 0, 0.762);
+  text-align: center;
 }
 
-.clima .climaContenedor .tituloClima {
-  text-align: center;
-  padding: 10px;
+.clima .climaContenedor .msg {
+  color: white;
+}
+
+.clima .climaContenedor .msg p {
+  padding: 20px;
+  font-size: 20px;
 }
 
 .clima .climaContenedor .tituloClima h3 {
   color: white;
   font-weight: bold;
+  padding-top: 30px;
 }
 
-.clima .climaContenedor .tituloClima p {
-  color: white;
-  font-weight: bold;
-}
-
-.clima .climaContenedor .tituloClima img {
+.clima .climaContenedor img {
   width: 50px;
 }
 
-.clima .climaContenedor .buscarClima {
-  text-align: center;
-  margin-bottom: 50px;
+.clima .climaContenedor .ciudadBuscada {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  justify-items: center;
 }
 
-.clima .climaContenedor .buscarClima input {
-  margin-bottom: 30px;
+.clima .climaContenedor .ciudadBuscada ul li {
+  list-style-type: none;
+}
+
+.clima .climaContenedor .ciudadBuscada .busquedaCiudad {
+  margin-top: 30px;
+  background-color: white;
+  width: 200px;
   border-radius: 10px;
+  height: 250px;
+}
+
+.clima .climaContenedor .ciudadBuscada .busquedaCiudad h2 {
+  padding: 15px;
+}
+
+.clima .climaContenedor .ciudadBuscada .busquedaCiudad h2 sup {
+  font-size: 0.5em;
+  padding: 0.2em 0.6em;
+  border-radius: 30px;
+  color: var(--text_light);
+  background: orange;
+}
+
+.clima .climaContenedor .ciudadBuscada .containerB .ciudades {
+  margin-bottom: 30px;
+}
+
+.clima form .input {
+  line-height: 28px;
+  border: 2px solid transparent;
+  border-bottom-color: white;
+  padding: .2rem 0;
+  outline: none;
+  background-color: transparent;
+  color: white;
+  -webkit-transition: 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition: 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+.clima form .input:focus {
+  outline: none;
+  padding: .2rem 1rem;
+  border-radius: 1rem;
+  border-color: rgba(114, 159, 65, 0.642);
+}
+
+.clima form .input:focus::-webkit-input-placeholder {
+  opacity: 0;
+  -webkit-transition: opacity .3s;
+  transition: opacity .3s;
+}
+
+.clima form .input:focus:-ms-input-placeholder {
+  opacity: 0;
+  -webkit-transition: opacity .3s;
+  transition: opacity .3s;
+}
+
+.clima form .input:focus::-ms-input-placeholder {
+  opacity: 0;
+  -webkit-transition: opacity .3s;
+  transition: opacity .3s;
+}
+
+.clima form .input:focus::placeholder {
+  opacity: 0;
+  -webkit-transition: opacity .3s;
+  transition: opacity .3s;
+}
+
+.clima form .input:hover {
+  outline: none;
+  padding: .2rem 1rem;
+  border-radius: 1rem;
+  border-color: rgba(114, 159, 65, 0.642);
+}
+
+.clima form .input::-webkit-input-placeholder {
+  color: white;
+}
+
+.clima form .input:-ms-input-placeholder {
+  color: white;
+}
+
+.clima form .input::-ms-input-placeholder {
+  color: white;
+}
+
+.clima form .input::placeholder {
+  color: white;
 }
 
 footer {
@@ -403,6 +496,16 @@ footer .logoFooter img {
     width: 75%;
     margin: auto;
     margin-top: 50px;
+  }
+  .clima .ciudadBuscada .containerB .ciudades {
+    display: -ms-grid;
+    display: grid;
+    justify-items: stretch;
+    -ms-grid-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 1.5rem;
+    grid-row-gap: 2rem;
+    margin-bottom: 30px;
   }
 }
 /*# sourceMappingURL=style.css.map */
