@@ -8,7 +8,7 @@ const Api = "4d8fb5b93d4af21d66a2948710284366";
 form.addEventListener("submit", (bot) => {
   bot.preventDefault();
   let inputVal = input.value;
-
+  /* comprueba si ya hay una ciudad */
   const listaItems = lista.querySelectorAll(".ciudadBuscada .ciudad");
   const listaItemsArray = Array.from(listaItems);
 
@@ -35,7 +35,7 @@ form.addEventListener("submit", (bot) => {
 
       return contenido == inputVal.toLowerCase();
     });
-
+    /* Si se repite la ciudad buscada muestra el mensaje */
     if (filtrandoArray.length > 0) {
       msg.innerHTML = `<p class="consultaste">Ya consultaste por ${
         filtrandoArray[0].querySelector(".nombreCiudad span").textContent
@@ -58,7 +58,7 @@ form.addEventListener("submit", (bot) => {
 
       const div = document.createElement("div");
       div.classList.add("ciudad");
-
+      /* muestra en web */
       const busqueda = `
       <div class="busquedaCiudad">
         <h2 class="nombreCiudad" data-name="${name},${sys.country}">

@@ -14,11 +14,11 @@ class ProductosPesca {
 
     this.finalizarCompra();
   }
-
+  /* Almacenar carrito */
   storage() {
     localStorage.setItem("carrito", JSON.stringify(carrito));
   }
-
+  /* Productos en la web */
   cargarProductos(productos) {
     const divProductos = document.querySelector("#productos");
 
@@ -100,7 +100,7 @@ class ProductosPesca {
     this.mostrarCarrito();
     this.storage();
   }
-
+  /* Actualiza el contador de productos */
   actualizarContador() {
     let totalArticulos = this.contarProductos();
 
@@ -108,7 +108,7 @@ class ProductosPesca {
 
     countCarrito.innerHTML = totalArticulos;
   }
-
+  /* Visualizamos cambios en carrito */
   mostrarCarrito() {
     let detalleCarrito = document.querySelector("#idCarrito");
 
@@ -161,7 +161,7 @@ class ProductosPesca {
 
     detalleCarrito.appendChild(row);
   }
-
+  /* Eliminar Articulos */
   eliminarArticulo(id) {
     Swal.fire({
       title: '"Esta seguro de eliminar el producto ?"',
@@ -200,7 +200,7 @@ class ProductosPesca {
       }
     });
   }
-
+  /* Botón de finalizar compra */
   finalizarCompra() {
     let botonFinalizar = document.getElementById("botonFinalizar");
     let detalleCarrito = document.querySelector("#idCarrito");
@@ -211,16 +211,12 @@ class ProductosPesca {
       detalleCarrito.innerHTML = "";
       countCarrito.innerHTML = 0;
 
-      swal
-        .fire({
-          icon: "success",
-          confirmButtonColor: "#719f41",
-          title: "Gracias por comprar en nuestra tienda!!",
-          text: "Nos pondremos en contacto",
-        })
-        .then(() => {
-          location.href = "../index.html";
-        });
+      swal.fire({
+        icon: "success",
+        confirmButtonColor: "#719f41",
+        title: "Gracias por comprar en nuestra tienda!!",
+        text: "Nos pondremos en contacto",
+      });
     });
   }
 }

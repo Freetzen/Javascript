@@ -2,7 +2,7 @@
 
 class Producto {
   constructor(id, nombre, precio, img, marca, descripcion) {
-    (this.id = id),
+      (this.id = id),
       (this.nombre = nombre),
       (this.precio = precio),
       (this.img = img),
