@@ -104,9 +104,9 @@ class ProductosPesca {
   actualizarContador() {
     let totalArticulos = this.contarProductos();
 
-    let ContadorCarrito = document.querySelector("#badgeCarrito");
+    let contadorCarrito = document.querySelector("#badgeCarrito");
 
-    ContadorCarrito.innerHTML = totalArticulos;
+    contadorCarrito.innerHTML = totalArticulos;
   }
   /* Visualizamos cambios en carrito */
   mostrarCarrito() {
@@ -204,12 +204,12 @@ class ProductosPesca {
   finalizarCompra() {
     let botonFinalizar = document.getElementById("botonFinalizar");
     let detalleCarrito = document.querySelector("#idCarrito");
-    let ContadorCarrito = document.querySelector("#badgeCarrito");
+    let contadorCarrito = document.querySelector("#badgeCarrito");
 
     botonFinalizar.addEventListener("click", () => {
       localStorage.clear();
       detalleCarrito.innerHTML = "";
-      ContadorCarrito.innerHTML = 0;
+      contadorCarrito.innerHTML = 0;
 
       swal.fire({
         icon: "success",
