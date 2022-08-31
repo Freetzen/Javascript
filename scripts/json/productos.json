@@ -1,58 +1,52 @@
-
 {
-    
-    "productos": [
-
-        {
-            "id": 1,
-            "nombre": "Caña mosca",
-            "marca": "Redington",
-            "descripcion": "Caña para mosca N°8",
-            "precio": 8858,
-            "img": "caña.jpg"
-        },
-        {
-            "id": 2,
-            "nombre": "Caja para mosca (4 divisiones)",
-            "marca": "Foam",
-            "descripcion": "Caja para moscas con 4 divisiones. 14 x 9",
-            "precio": 4500,
-            "img": "caja.jpg"
-        },
-    
-        {
-            "id": 3,
-            "nombre": "Reel para caña mosca",
-            "marca": "Redington",
-            "descripcion": "Zero Black / Sand 3-4.",
-            "precio": 20000,
-            "img": "reel.jpg"
-        },
-        {
-            "id": 4,
-            "nombre": "Linea para mosca",
-            "marca": "Rio",
-            "descripcion": "Línea Hundimiento RIO INTOUCH 24 FT SINK TIP",
-            "precio": 8000,
-            "img": "linea.jpg"
-        },
-        {
-            "id": 5,
-            "nombre": "Wader Neoprene",
-            "marca": "Waterdog",
-            "descripcion": "Waders Neoprene Waterdog talle L",
-            "precio": 26500,
-            "img": "wader.jpg"
-        },
-        {
-            "id": 6,
-            "nombre": "Riñonera",
-            "marca": "Kunnan",
-            "descripcion": "Riñonera Kunnan. 4 compartimientos",
-            "precio": 5300,
-            "img": "riñonera.jpg"
-        }
-    
-    ]
-
+  "productos": [
+    {
+      "id": 1,
+      "nombre": "Caña mosca",
+      "marca": "Redington",
+      "descripcion": "Caña para mosca N°8",
+      "precio": 8858,
+      "img": "caña.jpg"
+    },
+    {
+      "id": 2,
+      "nombre": "Caja para mosca (4 divisiones)",
+      "marca": "Foam",
+      "descripcion": "Caja para moscas con 4 divisiones. 14 x 9",
+      "precio": 4500,
+      "img": "caja.jpg"
+    },
+    {
+      "id": 3,
+      "nombre": "Reel para caña mosca",
+      "marca": "Redington",
+      "descripcion": "Zero Black / Sand 3-4.",
+      "precio": 20000,
+      "img": "reel.jpg"
+    },
+    {
+      "id": 4,
+      "nombre": "Linea para mosca",
+      "marca": "Rio",
+      "descripcion": "Línea Hundimiento RIO INTOUCH 24 FT SINK TIP",
+      "precio": 8000,
+      "img": "linea.jpg"
+    },
+    {
+      "id": 5,
+      "nombre": "Wader Neoprene",
+      "marca": "Waterdog",
+      "descripcion": "Waders Neoprene Waterdog talle L",
+      "precio": 26500,
+      "img": "wader.jpg"
+    },
+    {
+      "id": 6,
+      "nombre": "Riñonera",
+      "marca": "Kunnan",
+      "descripcion": "Riñonera Kunnan. 4 compartimientos",
+      "precio": 5300,
+      "img": "riñonera.jpg"
+    }
+  ]
 }

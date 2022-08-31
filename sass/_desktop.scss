@@ -1,121 +1,89 @@
-
-@media screen and (min-width: 1000px){
-
-.container{
-
-    .logo{
-
-        a{
-
-            img{
-                width: 170px;
-                height: 80px;
-            }
-
+@media screen and (min-width: 1000px) {
+  .container {
+    .logo {
+      a {
+        img {
+          width: 170px;
+          height: 80px;
         }
-
+      }
     }
-    
-}
+  }
 
-#iconoCarrito{
+  #iconoCarrito {
     color: $colorPrincipal;
-}
+  }
 
-#badgeCarrito{
+  #badgeCarrito {
     font-size: 0.8rem;
     background-color: $colorPrincipal !important;
-}
+  }
 
-.info{
+  .info {
     width: 75%;
     display: flex;
     margin: auto;
     margin-top: 50px;
-    
-    .nosotros{
-        
-        h1{
-            font-size: 35px;
-        }
 
-        p{
-            font-size: 20px;
-        }
+    .nosotros {
+      h1{
+        font-size: 35px;
+      }
+
+      p{
+        font-size: 20px;
+      }
     }
-}
+  }
 
-.tienda{
+  .tienda {
     max-width: 75%;
     margin: auto;
     margin-top: 50px;
 
-    .tituloTienda{
-        margin-top: 20px;
-    
-
+    .tituloTienda {
+      margin-top: 20px;
     }
 
-    .productos{
+    .productos {
+      .productos6 {
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-column-gap: 1.5rem;
+        grid-row-gap: 2rem;
 
-        .productos6{
-            grid-template-columns: 1fr 1fr 1fr;
-            grid-column-gap: 1.5rem;
-            grid-row-gap: 2rem;
+        div {
+          margin-bottom: 40px;
 
-            div{
+          img {
+            width: 50%;
+          }
 
-                margin-bottom: 40px;
-
-                img{
-                    
-                    width: 70%;
-                }
-
-                .cta{
-                   
-                     .hover-underline-animation{
-
-                        font-size: 15px;
-                     }
-                       
-
-                }
-    
+          .cta {
+            .hover-underline-animation {
+              font-size: 15px;
             }
-
+          }
         }
-
+      }
     }
-    
+  }
 
-}
-
-.clima{
+  .clima {
     width: 75%;
     margin: auto;
     margin-top: 50px;
 
-        .ciudadBuscada{
-            
-            .containerB{
-
-                .ciudades{
-                    display: grid;
-                    justify-items: stretch;
-                    grid-template-columns: 1fr 1fr 1fr;
-                    grid-column-gap: 1.5rem;
-                    grid-row-gap: 2rem;
-                    margin-bottom: 30px;
-        
-                }
-
-            }
-
+    .ciudadBuscada {
+      .containerB {
+        .ciudades {
+          display: grid;
+          justify-items: stretch;
+          grid-template-columns: 1fr 1fr 1fr;
+          grid-column-gap: 1.5rem;
+          grid-row-gap: 2rem;
+          margin-bottom: 30px;
         }
-
-
-}
-
-
+      }
+    }
+  }
 }

@@ -1,129 +1,121 @@
+const formulario = document.getElementById("formulario");
+const inputs = document.querySelectorAll("#formulario input");
 
-let formularioChallwan = new Array ();
+const expresiones = {
+  nombre: /^[a-zA-ZÀ-ÿ\s]{1,40}$/,
+  correo: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,
+  telefono: /^\d{7,14}$/,
+};
 
-let errores = document.getElementById("errores");
+const campos = {
+  nombre: false,
+  correo: false,
+  telefono: false,
+};
 
-let cargar_datos = document.getElementById("enviarForm");
+const validarFormulario = (e) => {
+  switch (e.target.name) {
+    case "nombre":
+      validarCampo(expresiones.nombre, e.target, "nombre");
+      break;
 
+    case "correo":
+      validarCampo(expresiones.correo, e.target, "correo");
+      break;
 
-cargar_datos.addEventListener("click",()=>{
+    case "telefono":
+      validarCampo(expresiones.telefono, e.target, "telefono");
+      break;
+  }
+};
 
-    if(validacion()){
+function enviarInfo() {
+  let nombre = document.getElementById("nombre").value.trim();
+  let correo = document.getElementById("correo").value.trim();
+  let telefono = document.getElementById("telefono").value.trim();
+  let consulta = document.getElementById("consulta").value.trim();
 
-        Swal.fire({
-            position: 'center',
-            icon: 'success',
-            title: 'Consulta enviada !!',
-            showConfirmButton: false,
-            timer: 1500
-            
-          })
+  return {
+    Nombre: nombre,
+    email: correo,
+    Telefno: telefono,
+    Consulta: consulta,
+  };
+}
 
-        restaurar()
+const validarCampo = (expresion, input, campo) => {
+  if (expresion.test(input.value)) {
+    document
+      .getElementById(`grupo__${campo}`)
+      .classList.remove("formulario__grupo-incorrecto");
+    document
+      .getElementById(`grupo__${campo}`)
+      .classList.add("formulario__grupo-correcto");
+    document
+      .querySelector(`#grupo__${campo} i`)
+      .classList.add("fa-check-circle");
+    document
+      .querySelector(`#grupo__${campo} i`)
+      .classList.remove("fa-times-circle");
+    document
+      .querySelector(`#grupo__${campo} .formulario__input-error`)
+      .classList.remove("formulario__input-error-activo");
+    campos[campo] = true;
+  } else {
+    document
+      .getElementById(`grupo__${campo}`)
+      .classList.add("formulario__grupo-incorrecto");
+    document
+      .getElementById(`grupo__${campo}`)
+      .classList.remove("formulario__grupo-correcto");
+    document
+      .querySelector(`#grupo__${campo} i`)
+      .classList.add("fa-times-circle");
+    document
+      .querySelector(`#grupo__${campo} i`)
+      .classList.remove("fa-check-circle");
+    document
+      .querySelector(`#grupo__${campo} .formulario__input-error`)
+      .classList.add("formulario__input-error-activo");
+    campos[campo] = false;
+  }
+};
 
-    }
-
-
-
+inputs.forEach((input) => {
+  input.addEventListener("keyup", validarFormulario);
+  input.addEventListener("blur", validarFormulario);
 });
 
+formulario.addEventListener("submit", (e) => {
+  e.preventDefault();
 
+  if (campos.nombre && campos.correo && campos.telefono) {
+    localStorage.setItem("enviarInfo", JSON.stringify(this.enviarInfo()));
 
+    Swal.fire({
+      position: "center",
+      icon: "success",
+      title: "Consulta enviada!!",
+      showConfirmButton: false,
+      timer: 1000,
+    });
 
-function validacion(){
-
-    errores.innerHTML = "";
-
-    let input_nombre = document.getElementById("nombre").value;
-    let input_apellido = document.getElementById("apellido").value;
-    let input_mail = document.getElementById("mail").value;
-    let input_consulta = document.getElementById("consulta").value;
-
-
-    let avisosMensajes = new Array();
-    
-    if(!input_nombre){
-        
-        avisosMensajes.push("Ingrese un Titulo.");
-
-
+    document
+      .querySelectorAll(".formulario__grupo-correcto")
+      .forEach((icono) => {
+        icono.classList.remove("formulario__grupo-correcto");
+      });
+  } else {
+    document
+      .getElementById("formulario__mensaje")
+      .classList.add("formulario__mensaje-activo");
+    {
+      swal.fire({
+        icon: "warning",
+        title: "Ingrese todos los datos en el formulario",
+      });
     }
+  }
 
-    if(!input_apellido){
-
-        avisosMensajes.push("Ingrese una Marca.");
-
-
-    }
-
-    if(!input_mail){
-
-        avisosMensajes.push("Ingrese un correo.");
-
-
-    }
-
-    if(!input_consulta){
-
-        avisosMensajes.push("Ingrese una consulta.");
-
-
-    }
-
-    if(avisosMensajes.length>0){
-
-        let lista = document.createElement("ul");
-        lista.textContent = "No ha sido posible cargar los datos";
-
-        avisosMensajes.forEach(informacion => {
-
-            lista.appendChild(crearLista(informacion));
-        })
-
-        errores.appendChild(lista);
-
-    }
-
-
-    
-  return avisosMensajes.length == 0;
-
-}
-
-function crearLista(informacion){
-
-    let li = document.createElement("li");
-    li.textContent = informacion;
-    return li;
-
-}
-
-function  crearProducto(){
-
-    let nombre = document.getElementById("nombre").value;
-    let apellido = document.getElementById("apellido").value;
-    let mail = document.getElementById("mail").value;
-    let consulta = document.getElementById("consulta").value;
-
-
-
-    let nuevoformulario = new Formulario (nombre,apellido,mail,consulta);
-
-    formularioChallwan.push(nuevoformulario);
-
-}
-
-function storageForm(){
-
-    localStorage.setItem("formularios", JSON.stringify(formularioChallwan));
-
-}
-
-function restaurar(){
-
-    document.getElementById("nombre").value = "";
-    document.getElementById("apellido").value = "";
-    document.getElementById("mail").value = "";
-    document.getElementById("consulta").value = "";
-
-}
+  formulario.reset();
+});
