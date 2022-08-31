@@ -211,11 +211,16 @@ class ProductosPesca {
       detalleCarrito.innerHTML = "";
       countCarrito.innerHTML = 0;
 
-      swal.fire({
-        icon: "success",
-        title: "Gracias por comprar en nuestra tienda!!",
-        text: "Nos pondremos en contacto",
-      });
+      swal
+        .fire({
+          icon: "success",
+          confirmButtonColor: "#719f41",
+          title: "Gracias por comprar en nuestra tienda!!",
+          text: "Nos pondremos en contacto",
+        })
+        .then(() => {
+          location.href = "../index.html";
+        });
     });
   }
 }
