@@ -11,6 +11,8 @@ class ProductosPesca {
     this.actualizarCarrito();
 
     this.actualizarContador();
+
+    this.finalizarCompra();
   }
 
   storage() {
@@ -24,7 +26,8 @@ class ProductosPesca {
 
     if (productos.length > 0) {
       productos.forEach((producto) => {
-        const { id, nombre, marca, descripcion, precio, img, cantidad} = producto;
+        const { id, nombre, marca, descripcion, precio, img, cantidad } =
+          producto;
         let prod = document.createElement("div");
         prod.setAttribute("id", "row_" + producto.id);
 
@@ -86,7 +89,7 @@ class ProductosPesca {
     let contadorProductos = 0;
 
     carrito.forEach((producto) => {
-      contadorProductos = contadorProductos + parseInt(producto.cantidad);
+      contadorProductos += parseInt(producto.cantidad);
     });
 
     return contadorProductos;
@@ -116,8 +119,8 @@ class ProductosPesca {
     let total = 0;
 
     carrito.forEach((producto) => {
-
-      const { id, nombre, marca, descripcion, precio, img, cantidad} = producto;
+      const { id, nombre, marca, descripcion, precio, img, cantidad } =
+        producto;
 
       const row = document.createElement("div");
       row.classList.add("row");
@@ -197,6 +200,24 @@ class ProductosPesca {
           },
         }).showToast();
       }
+    });
+  }
+
+  finalizarCompra() {
+    let botonFinalizar = document.getElementById("botonFinalizar");
+    let detalleCarrito = document.querySelector("#idCarrito");
+    let countCarrito = document.querySelector("#badgeCarrito");
+
+    botonFinalizar.addEventListener("click", () => {
+      localStorage.clear();
+      detalleCarrito.innerHTML = "";
+      countCarrito.innerHTML = 0;
+
+      swal.fire({
+        icon: "success",
+        title: "Gracias por comprar en nuestra tienda!!",
+        text: "Nos pondremos en contacto",
+      });
     });
   }
 }
