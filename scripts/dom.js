@@ -129,7 +129,7 @@ class ProductosPesca {
 
       row.innerHTML = `
                         <div class="col-3 d-flex align-items-center p-2 border-bottom">
-                            <img src="${img}" width="60"/>
+                            <img src="${img}" width="75"/>
                         </div>
                         <div class="col-3 d-flex align-items-center p-2 border-bottom">
                             ${nombre}
